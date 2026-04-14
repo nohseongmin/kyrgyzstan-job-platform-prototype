@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разместить вакансию - Работа.kg</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forms.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <ion-icon name="briefcase"></ion-icon>
+                <span>Работа.kg</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Вакансии</a>
+                <a href="#">Резюме</a>
+                <a href="#">Компании</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="post-job.html" class="employer-btn active">Работодателям</a>
+                <button class="login-btn">Войти</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Разместить вакансию</h1>
+                <p>Найдите идеального сотрудника среди тысяч кандидатов Кыргызстана</p>
+            </div>
+
+            <form action="#" id="postJobForm">
+                <div class="form-group">
+                    <label>Название должности <span class="required">*</span></label>
+                    <input type="text" id="jobTitle" name="jobTitle" class="form-control" placeholder="Например: Бариста, Курьер, Менеджер по продажам" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Сфера деятельности <span class="required">*</span></label>
+                        <select id="jobCategory" name="jobCategory" class="form-control" required>
+                            <option value="">Выберите категорию</option>
+                            <option value="it">IT, Интернет, Телеком</option>
+                            <option value="delivery">Транспорт, Логистика, Доставка</option>
+                            <option value="restaurant">Рестораны, Питание</option>
+                            <option value="retail">Продажи, Торговля</option>
+                            <option value="students">Начало карьеры, Студенты</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Регион / Город <span class="required">*</span></label>
+                        <select id="jobLocation" name="jobLocation" class="form-control" required>
+                            <option value="bishkek">Бишкек</option>
+                            <option value="osh">Ош</option>
+                            <option value="jalal-abad">Джалал-Абад</option>
+                            <option value="karakol">Каракол</option>
+                            <option value="remote">Удаленная работа</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Тип занятости <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="employment_type" value="full" checked>
+                            Полная занятость
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="employment_type" value="part">
+                            Подработка (Частичная занятость)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="employment_type" value="once">
+                            Разовая работа
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Зарплата (Сом) от <span class="required">*</span></label>
+                        <input id="jobSalaryFrom" name="jobSalaryFrom" type="number" class="form-control" placeholder="30000" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Зарплата до</label>
+                        <input id="jobSalaryTo" name="jobSalaryTo" type="number" class="form-control" placeholder="45000">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Обязанности и описание <span class="required">*</span></label>
+                    <textarea id="jobDescription" name="jobDescription" class="form-control" placeholder="Опишите основные задачи, которые будет выполнять сотрудник..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Требования к кандидату</label>
+                    <textarea id="jobRequirements" name="jobRequirements" class="form-control" placeholder="Опыт работы, навыки, личные качества..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Условия работы</label>
+                    <textarea id="jobConditions" name="jobConditions" class="form-control" placeholder="График работы, бонусы, бесплатное питание..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Опубликовать вакансию</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="margin-top: 5rem;">
+        <div class="footer-bottom" style="border-top: none; text-align: center; color: var(--text-muted); padding: 2rem;">
+            &copy; 2026 Работа.kg. Прототип страницы работодателя.
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>

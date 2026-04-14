@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа.kg - Поиск подработки и работы в Кыргызстане</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ionicons for modern icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <ion-icon name="briefcase"></ion-icon>
+                <span>Работа.kg</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Вакансии</a>
+                <a href="#">Резюме</a>
+                <a href="#">Компании</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="post-job.html" class="employer-btn">Работодателям</a>
+                <button class="login-btn">Войти</button>
+            </div>
+            <button class="mobile-menu-btn"><ion-icon name="menu-outline"></ion-icon></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>Идеальная подработка и работа в Кыргызстане</h1>
+            <p>Тысячи вакансий от проверенных работодателей. Начните зарабатывать уже сегодня!</p>
+            
+            <form class="search-bar" id="searchForm">
+                <div class="search-input">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" placeholder="Профессия, должность или компания">
+                </div>
+                <div class="divider"></div>
+                <div class="search-location">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <select>
+                        <option value="bishkek">Бишкек</option>
+                        <option value="osh">Ош</option>
+                        <option value="jalal-abad">Джалал-Абад</option>
+                        <option value="karakol">Каракол</option>
+                        <option value="all">Кыргызстан (все регионы)</option>
+                    </select>
+                </div>
+                <button type="submit" class="search-btn">Найти работу</button>
+            </form>
+
+            <div class="quick-tags">
+                <span class="tag">Для студентов</span>
+                <span class="tag">Без опыта</span>
+                <span class="tag">Ежедневная оплата</span>
+                <span class="tag">Удаленная работа</span>
+                <span class="tag">На выходные</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Layout -->
+    <main class="main-container">
+        <!-- Sidebar Filters -->
+        <aside class="filters">
+            <div class="filter-header">
+                <h3>Фильтры</h3>
+                <button class="reset-btn" type="button">Сбросить</button>
+            </div>
+            
+            <div class="filter-group">
+                <h4>Тип занятости</h4>
+                <label class="checkbox-container">
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                    Любая занятость
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Полная занятость (Долгосрочная)
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Частичная занятость (Подработка)
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Разовая работа
+                </label>
+            </div>
+
+            <div class="filter-group">
+                <h4>График работы</h4>
+                <label class="checkbox-container"><input type="checkbox"><span class="checkmark"></span>Полный день</label>
+                <label class="checkbox-container"><input type="checkbox"><span class="checkmark"></span>Сменный график</label>
+                <label class="checkbox-container"><input type="checkbox"><span class="checkmark"></span>Гибкий график</label>
+                <label class="checkbox-container"><input type="checkbox"><span class="checkmark"></span>Удаленная работа</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Уровень дохода (Сом)</h4>
+                <div class="salary-inputs">
+                    <input type="number" placeholder="От">
+                    <span>-</span>
+                    <input type="number" placeholder="До">
+                </div>
+            </div>
+        </aside>
+
+        <!-- Job Listings -->
+        <div class="job-list-area">
+            <div class="list-header">
+                <h2>Горячие вакансии <span class="job-count">24 105</span></h2>
+                <div class="sort-dropdown">
+                    Сортировка: <strong>По дате</strong> <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="jobs-grid" id="jobsGrid">
+                <!-- Job Card 1 -->
+                <div class="job-card featured">
+                    <div class="job-card-header">
+                        <div class="company-logo bg-orange">S</div>
+                        <div class="job-title-area">
+                            <h3>Бариста в кофейню</h3>
+                            <span class="company-name">Кофейня "Sierra" <ion-icon name="checkmark-circle" class="verified"></ion-icon></span>
+                        </div>
+                        <div class="like-btn"><ion-icon name="heart-outline"></ion-icon></div>
+                    </div>
+                    <div class="salary">25 000 - 35 000 сом</div>
+                    <div class="job-details">
+                        <div class="detail"><ion-icon name="location-outline"></ion-icon> Бишкек</div>
+                        <div class="detail"><ion-icon name="time-outline"></ion-icon> Сменный график</div>
+                    </div>
+                    <div class="job-tags">
+                        <span class="tag-sm blue">Подработка</span>
+                        <span class="tag-sm gray">Без опыта</span>
+                    </div>
+                    <div class="card-footer">
+                        <button class="apply-btn">Откликнуться</button>
+                        <span class="date">Опубликовано 2 часа назад</span>
+                    </div>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="company-logo bg-green">G</div>
+                        <div class="job-title-area">
+                            <h3>Курьер с личным авто</h3>
+                            <span class="company-name">Glovo Kyrgyzstan</span>
+                        </div>
+                        <div class="like-btn"><ion-icon name="heart-outline"></ion-icon></div>
+                    </div>
+                    <div class="salary">от 50 000 сом</div>
+                    <div class="job-details">
+                        <div class="detail"><ion-icon name="location-outline"></ion-icon> Ош</div>
+                        <div class="detail"><ion-icon name="time-outline"></ion-icon> Гибкий график</div>
+                    </div>
+                    <div class="job-tags">
+                        <span class="tag-sm blue">Ежедневная оплата</span>
+                    </div>
+                    <div class="card-footer">
+                        <button class="apply-btn">Откликнуться</button>
+                        <span class="date">Сегодня</span>
+                    </div>
+                </div>
+
+                <!-- Job Card 3 -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="company-logo bg-yellow">B</div>
+                        <div class="job-title-area">
+                            <h3>Промоутер на выходные</h3>
+                            <span class="company-name">Beeline KG</span>
+                        </div>
+                        <div class="like-btn"><ion-icon name="heart-outline"></ion-icon></div>
+                    </div>
+                    <div class="salary">1 500 сом / день</div>
+                    <div class="job-details">
+                        <div class="detail"><ion-icon name="location-outline"></ion-icon> Бишкек</div>
+                        <div class="detail"><ion-icon name="time-outline"></ion-icon> Частичная занятость</div>
+                    </div>
+                    <div class="job-tags">
+                        <span class="tag-sm blue">Студентам</span>
+                        <span class="tag-sm gray">Разовая работа</span>
+                    </div>
+                    <div class="card-footer">
+                        <button class="apply-btn">Откликнуться</button>
+                        <span class="date">Вчера</span>
+                    </div>
+                </div>
+
+                <!-- Job Card 4 -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="company-logo bg-blue">O</div>
+                        <div class="job-title-area">
+                            <h3>Оператор call-центра</h3>
+                            <span class="company-name">ОПТИМА Банк</span>
+                        </div>
+                        <div class="like-btn"><ion-icon name="heart-outline"></ion-icon></div>
+                    </div>
+                    <div class="salary">30 000 сом</div>
+                    <div class="job-details">
+                        <div class="detail"><ion-icon name="location-outline"></ion-icon> Удаленно (Все регионы)</div>
+                        <div class="detail"><ion-icon name="time-outline"></ion-icon> Полная занятость</div>
+                    </div>
+                    <div class="job-tags">
+                        <span class="tag-sm blue">Долгосрочная</span>
+                    </div>
+                    <div class="card-footer">
+                        <button class="apply-btn">Откликнуться</button>
+                        <span class="date">3 дня назад</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button class="load-more-btn">Показать больше вакансий</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-branding">
+                <a href="index.html" class="logo white" style="text-decoration: none; color: inherit;">
+                    <ion-icon name="briefcase"></ion-icon>
+                    <span>Работа.kg</span>
+                </a>
+                <p>Крупнейшая платформа для поиска подработки и долгосрочной работы в Кыргызстане.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Соискателям</h4>
+                <a href="#">Поиск работы</a>
+                <a href="#">Создать резюме</a>
+                <a href="#">Помощь</a>
+            </div>
+            <div class="footer-links">
+                <h4>Работодателям</h4>
+                <a href="#">Разместить вакансию</a>
+                <a href="#">Поиск сотрудников</a>
+                <a href="#">Прайс-лист</a>
+            </div>
+            <div class="footer-apps">
+                <h4>Мобильное приложение</h4>
+                <button class="app-download"><ion-icon name="logo-apple"></ion-icon> App Store</button>
+                <button class="app-download"><ion-icon name="logo-google-playstore"></ion-icon> Google Play</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Работа.kg (Prototype). Все права защищены.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

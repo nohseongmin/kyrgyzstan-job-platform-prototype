@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отклик на вакансию - Работа.kg</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forms.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <ion-icon name="briefcase"></ion-icon>
+                <span>Работа.kg</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Вакансии</a>
+                <a href="#">Резюме</a>
+                <a href="#">Компании</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="login-btn">Мой Профиль</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Отклик на вакансию</h1>
+                <p>Заполните контактные данные, чтобы работодатель мог с вами связаться</p>
+            </div>
+
+            <!-- Context Banner -->
+            <div class="job-context-banner">
+                <div class="job-context-logo">S</div>
+                <div class="job-context-details">
+                    <h3>Бариста в кофейню</h3>
+                    <p>Кофейня "Sierra" • Бишкек</p>
+                    <span class="badge">25 000 - 35 000 сом</span>
+                </div>
+            </div>
+
+            <form action="#" id="applyJobForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Имя <span class="required">*</span></label>
+                        <input type="text" class="form-control" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Фамилия <span class="required">*</span></label>
+                        <input type="text" class="form-control" placeholder="Ваша фамилия" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Номер телефона <span class="required">*</span></label>
+                    <input type="tel" class="form-control" placeholder="+996 (___) __-__-__" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Электронная почта</label>
+                    <input type="email" class="form-control" placeholder="example@mail.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Сопроводительное письмо</label>
+                    <textarea class="form-control" placeholder="Напишите, почему вы подходите на эту должность, ваш опыт работы и навыки..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Добавить резюме (PDF, DOCX)</label>
+                    <div class="file-upload-wrapper">
+                        <input type="file" accept=".pdf,.doc,.docx">
+                        <ion-icon name="cloud-upload-outline"></ion-icon>
+                        <p>Нажмите здесь или перетащите файл резюме</p>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitApplyBtn">Отправить отклик</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="margin-top: 5rem;">
+        <div class="footer-bottom" style="border-top: none; text-align: center; color: var(--text-muted); padding: 2rem;">
+            &copy; 2026 Работа.kg. Прототип страницы соискателя.
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
